@@ -42,7 +42,7 @@ By default application is running on database located on localhost with definied
 |   POST | banking-auth | /auth/login                                           | retrieve JWT token after successfull login                  |
 |   POST | banking-auth | /auth/verify[?token,routeName,customer_id,account_id] | verify that user has access to required resources           |
 
-See this [Postman collection](assets/cash-gopher-outside.postman_collection.json) for more detailed overwiew.
+See this [Postman collection](assets/cash-goopher-outside.postman_collection.json) for more detailed overwiew.
 
 ### Authorization
 
