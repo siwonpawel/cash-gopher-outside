@@ -42,18 +42,18 @@ By default application is running on database located on localhost with definied
 |   POST | banking-auth | /auth/login                                           | retrieve JWT token after successfull login                  |
 |   POST | banking-auth | /auth/verify[?token,routeName,customer_id,account_id] | verify that user has access to required resources           |
 
-See this [Postman collection](https://github.com/siwonpawel/cash-gopher-outside/assets/cash-gopher-outside.postman_collection.json) for more detailed overwiew.
+See this [Postman collection](assets/cash-gopher-outside.postman_collection.json) for more detailed overwiew.
 
 ### Authorization
 
 Banking application is main route for most of endpoints. It uses middlware to validate access to resources. Validation is executing by requesting from **banking-app** by REST service a response if token given by user is valid and if it can access specific endpoint in **banking**.
 
-![interaction for authorization](https://github.com/siwonpawel/cash-gopher-outside/assets/authorization.jpg)
+![interaction for authorization](assets/authorization.jpg)
 
 ## How it's designed
 
 Application is created in hexagonal architecture principles.
 
-![hexagonal architecture diagram](https://github.com/siwonpawel/cash-gopher-outside/assets/hexagonal_architecture.jpg)
+![hexagonal architecture diagram](assets/hexagonal_architecture.jpg)
 
 This allow us to crete new types of repositories and not to care about the implementation as long as all methods are specified on the type. Application contains domain, models, data objects, services, repositories, REST handlers and application configuration specific helpers. 
